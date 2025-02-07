@@ -21,7 +21,6 @@ universe <- AnnotationDbi::select(org.Hs.eg.db,
 
 sig_genes <- resdata$gene[which(resdata$padj<0.05)]
 
-####il seguente comando va fatto per GSEA#####
 entrez_genes_sig <- unique(universe[which(universe$ENSEMBL %in% sig_genes),]$ENTREZID)
 
 pvalue_ens_genes <- resdata$padj[which(resdata$padj<0.05)]
